@@ -1,0 +1,6 @@
+.idea
+*.pyc
+outputs
+get_pdf_index_by_index.py
+test.py
+*pkl

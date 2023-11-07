@@ -1,3 +1,5 @@
+import pickle
+
 import rasterio
 
 # 打开TIF图像文件
@@ -6,8 +8,8 @@ import rasterio
 '''
 class read_tid:
     def __init__(self,path):
-        self.tif_path = path
-        self.src=rasterio.open(tif_path)
+        with open(path, "rb") as file:
+            self.transform= pickle.load(file)
     def get_locate(self,x,y):
-        lon, lat = src.xy(x, y)
-        return lon,lat
+        lon, lat = self.transform*(x, y)
+        return lon/1e5,lat/1e5

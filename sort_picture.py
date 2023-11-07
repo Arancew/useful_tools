@@ -3,7 +3,7 @@
 import os
 
 # 指定文件夹路径
-folder_path = r'D:\code\py\尝试3-图片图片匹配\data\uav_image_low_size'
+folder_path = r'D:\code\uav_ponit\Position_correction\data\uav_image_low_size'
 
 # 遍历文件夹中的文件
 for filename in os.listdir(folder_path):
